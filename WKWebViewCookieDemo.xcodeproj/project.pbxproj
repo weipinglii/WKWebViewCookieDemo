@@ -1,0 +1,360 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F88A2DCF2429AA7C00C01DF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F88A2DCE2429AA7C00C01DF6 /* AppDelegate.m */; };
+		F88A2DD22429AA7C00C01DF6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F88A2DD12429AA7C00C01DF6 /* SceneDelegate.m */; };
+		F88A2DD52429AA7C00C01DF6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F88A2DD42429AA7C00C01DF6 /* ViewController.m */; };
+		F88A2DD82429AA7C00C01DF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F88A2DD62429AA7C00C01DF6 /* Main.storyboard */; };
+		F88A2DDA2429AA7D00C01DF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F88A2DD92429AA7D00C01DF6 /* Assets.xcassets */; };
+		F88A2DDD2429AA7D00C01DF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F88A2DDB2429AA7D00C01DF6 /* LaunchScreen.storyboard */; };
+		F88A2DE02429AA7D00C01DF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F88A2DDF2429AA7D00C01DF6 /* main.m */; };
+		F88A31862429DEF100C01DF6 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F88A31852429DEF100C01DF6 /* WebViewController.m */; };
+		F88A31892429E0C200C01DF6 /* WebViewCookieUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F88A31882429E0C200C01DF6 /* WebViewCookieUtil.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F88A2DCA2429AA7C00C01DF6 /* WKWebViewCookieDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKWebViewCookieDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F88A2DCD2429AA7C00C01DF6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F88A2DCE2429AA7C00C01DF6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F88A2DD02429AA7C00C01DF6 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		F88A2DD12429AA7C00C01DF6 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		F88A2DD32429AA7C00C01DF6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F88A2DD42429AA7C00C01DF6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F88A2DD72429AA7C00C01DF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F88A2DD92429AA7D00C01DF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F88A2DDC2429AA7D00C01DF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F88A2DDE2429AA7D00C01DF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F88A2DDF2429AA7D00C01DF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F88A31842429DEF100C01DF6 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		F88A31852429DEF100C01DF6 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		F88A31872429E0C200C01DF6 /* WebViewCookieUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewCookieUtil.h; sourceTree = "<group>"; };
+		F88A31882429E0C200C01DF6 /* WebViewCookieUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewCookieUtil.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F88A2DC72429AA7C00C01DF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F88A2DC12429AA7C00C01DF6 = {
+			isa = PBXGroup;
+			children = (
+				F88A2DCC2429AA7C00C01DF6 /* WKWebViewCookieDemo */,
+				F88A2DCB2429AA7C00C01DF6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F88A2DCB2429AA7C00C01DF6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F88A2DCA2429AA7C00C01DF6 /* WKWebViewCookieDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F88A2DCC2429AA7C00C01DF6 /* WKWebViewCookieDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F88A2DCD2429AA7C00C01DF6 /* AppDelegate.h */,
+				F88A2DCE2429AA7C00C01DF6 /* AppDelegate.m */,
+				F88A2DD02429AA7C00C01DF6 /* SceneDelegate.h */,
+				F88A2DD12429AA7C00C01DF6 /* SceneDelegate.m */,
+				F88A2DD32429AA7C00C01DF6 /* ViewController.h */,
+				F88A2DD42429AA7C00C01DF6 /* ViewController.m */,
+				F88A31842429DEF100C01DF6 /* WebViewController.h */,
+				F88A31852429DEF100C01DF6 /* WebViewController.m */,
+				F88A31872429E0C200C01DF6 /* WebViewCookieUtil.h */,
+				F88A31882429E0C200C01DF6 /* WebViewCookieUtil.m */,
+				F88A2DD62429AA7C00C01DF6 /* Main.storyboard */,
+				F88A2DD92429AA7D00C01DF6 /* Assets.xcassets */,
+				F88A2DDB2429AA7D00C01DF6 /* LaunchScreen.storyboard */,
+				F88A2DDE2429AA7D00C01DF6 /* Info.plist */,
+				F88A2DDF2429AA7D00C01DF6 /* main.m */,
+			);
+			path = WKWebViewCookieDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F88A2DC92429AA7C00C01DF6 /* WKWebViewCookieDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F88A2DE32429AA7D00C01DF6 /* Build configuration list for PBXNativeTarget "WKWebViewCookieDemo" */;
+			buildPhases = (
+				F88A2DC62429AA7C00C01DF6 /* Sources */,
+				F88A2DC72429AA7C00C01DF6 /* Frameworks */,
+				F88A2DC82429AA7C00C01DF6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WKWebViewCookieDemo;
+			productName = WKWebViewCookieDemo;
+			productReference = F88A2DCA2429AA7C00C01DF6 /* WKWebViewCookieDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F88A2DC22429AA7C00C01DF6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = weiping.lii;
+				TargetAttributes = {
+					F88A2DC92429AA7C00C01DF6 = {
+						CreatedOnToolsVersion = 11.2;
+					};
+				};
+			};
+			buildConfigurationList = F88A2DC52429AA7C00C01DF6 /* Build configuration list for PBXProject "WKWebViewCookieDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F88A2DC12429AA7C00C01DF6;
+			productRefGroup = F88A2DCB2429AA7C00C01DF6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F88A2DC92429AA7C00C01DF6 /* WKWebViewCookieDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F88A2DC82429AA7C00C01DF6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F88A2DDD2429AA7D00C01DF6 /* LaunchScreen.storyboard in Resources */,
+				F88A2DDA2429AA7D00C01DF6 /* Assets.xcassets in Resources */,
+				F88A2DD82429AA7C00C01DF6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F88A2DC62429AA7C00C01DF6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F88A2DD52429AA7C00C01DF6 /* ViewController.m in Sources */,
+				F88A31862429DEF100C01DF6 /* WebViewController.m in Sources */,
+				F88A2DCF2429AA7C00C01DF6 /* AppDelegate.m in Sources */,
+				F88A2DE02429AA7D00C01DF6 /* main.m in Sources */,
+				F88A2DD22429AA7C00C01DF6 /* SceneDelegate.m in Sources */,
+				F88A31892429E0C200C01DF6 /* WebViewCookieUtil.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F88A2DD62429AA7C00C01DF6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F88A2DD72429AA7C00C01DF6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F88A2DDB2429AA7D00C01DF6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F88A2DDC2429AA7D00C01DF6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F88A2DE12429AA7D00C01DF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F88A2DE22429AA7D00C01DF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F88A2DE42429AA7D00C01DF6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AZANSYLTW4;
+				INFOPLIST_FILE = WKWebViewCookieDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.weiping.WKWebViewCookieDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F88A2DE52429AA7D00C01DF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AZANSYLTW4;
+				INFOPLIST_FILE = WKWebViewCookieDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.weiping.WKWebViewCookieDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F88A2DC52429AA7C00C01DF6 /* Build configuration list for PBXProject "WKWebViewCookieDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F88A2DE12429AA7D00C01DF6 /* Debug */,
+				F88A2DE22429AA7D00C01DF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F88A2DE32429AA7D00C01DF6 /* Build configuration list for PBXNativeTarget "WKWebViewCookieDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F88A2DE42429AA7D00C01DF6 /* Debug */,
+				F88A2DE52429AA7D00C01DF6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F88A2DC22429AA7C00C01DF6 /* Project object */;
+}
