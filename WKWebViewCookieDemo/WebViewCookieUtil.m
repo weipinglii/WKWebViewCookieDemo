@@ -26,7 +26,7 @@
     NSArray<NSHTTPCookie *> *oldCookies = httpCookieStorage.cookies;
     [oldCookies enumerateObjectsUsingBlock:^(NSHTTPCookie * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         for (NSString *name in toRemove) {
-            if ([obj.domain isEqualToString:name] && [obj.domain isEqualToString:domainForThisApp]) {
+            if ([obj.name isEqualToString:name] && [obj.domain hasSuffix:domainForThisApp]) {
                 [httpCookieStorage deleteCookie:obj];
             }
         }
@@ -44,7 +44,7 @@
             dispatch_group_t cleanGroup = dispatch_group_create();
             for (NSHTTPCookie *cookie in currentCookies) {
                 for (NSString *name in toRemove) {
-                    if ([cookie.domain isEqualToString:domainForThisApp] && [cookie.name isEqualToString:name]) {
+                    if ([cookie.domain hasSuffix:domainForThisApp] && [cookie.name isEqualToString:name]) {
                         dispatch_group_enter(cleanGroup);
                         [wkCookieStore deleteCookie:cookie completionHandler:^{
                             dispatch_group_leave(cleanGroup);
