@@ -59,7 +59,22 @@
             });
         }];
     } else {
+        
         //  adjust userScript and reload webView if needed
+        [[WKWebsiteDataStore defaultDataStore] fetchDataRecordsOfTypes:[NSSet setWithObject:WKWebsiteDataTypeCookies] completionHandler:^(NSArray<WKWebsiteDataRecord *> * _Nonnull records) {
+            NSMutableArray *temp = [NSMutableArray array];
+            for (WKWebsiteDataRecord *record in records) {
+                if ([record.displayName containsString:domainComponentForThisApp]) {
+                    [temp addObject:record];
+                }
+            }
+            if (temp.count) {
+                [[WKWebsiteDataStore defaultDataStore] removeDataOfTypes:[NSSet setWithObject:WKWebsiteDataTypeCookies] forDataRecords:temp completionHandler:^{
+                    NSLog(@"\n>>>\n>>> %s\n>>> cookie record deleted\n>>>", __PRETTY_FUNCTION__);
+                }];
+            }
+        }];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kCookieScriptShouldUpdateNotification object:nil userInfo:@{keyForReloadWebView:@YES}];
     }
 }
 
@@ -138,3 +153,7 @@
 @end
 
 NSString *domainForThisApp = @".bing.com";
+NSString *domainComponentForThisApp = @"bing.com";
+
+NSString * const kCookieScriptShouldUpdateNotification = @"kCookieScriptShouldUpdateNotification";
+NSString * const keyForReloadWebView = @"keyForReloadWebView";

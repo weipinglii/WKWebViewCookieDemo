@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UIStackView *cookieInfoStack;
+@property (weak, nonatomic) IBOutlet UITextField *cookieToDelete;
 
 @end
 
@@ -41,6 +42,10 @@
     NSParameterAssert(URL);
 }
 
+- (IBAction)deleteCookie:(id)sender {
+    NSArray *cookieNames = [self.cookieToDelete.text componentsSeparatedByString:@" "];
+    [WebViewCookieUtil clientCookieDidUpdate:nil toRemove:cookieNames];
+}
 
 
 

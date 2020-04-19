@@ -27,7 +27,7 @@
     if (@available(iOS 11.0, *)) {
         [[WKWebsiteDataStore defaultDataStore].httpCookieStore addObserver:self];
     }
-    
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [self.view insertSubview:self.wkWebView atIndex:0];
     [self.view addSubview:self.progressView];
     
@@ -46,6 +46,26 @@
     [self.wkWebView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor].active = YES;
     
     [self loadURLWithCachePolicy:NSURLRequestUseProtocolCachePolicy];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onCookieScriptShouldUpdateNotification:) name:kCookieScriptShouldUpdateNotification object:nil];
+}
+
+- (void)dealloc {
+    [_wkWebView stopLoading];
+    [_wkWebView removeObserver:self forKeyPath:NSStringFromSelector(@selector(estimatedProgress))];
+}
+
+- (void)onCookieScriptShouldUpdateNotification:(NSNotification *)notification {
+    if (@available(iOS 11.0, *)) {
+        //  no need to update cookie script
+    } else {
+        BOOL shouldReload = [notification.userInfo[keyForReloadWebView] boolValue];
+        if (shouldReload) {
+            [self reload];
+        } else {        
+            [WebViewCookieUtil updateCookieScriptForWKWebviewInIOS10OrEarlier:self.wkWebView];
+        }
+    }
 }
 
 #pragma mark - WKHTTPCookieStoreObserver
@@ -74,13 +94,17 @@
 }
 
 - (void)reload {
-    [WebViewCookieUtil updateCookieScriptForWKWebviewInIOS10OrEarlier:self.wkWebView];
+    if (@available(iOS 11.0, *)) {
+        //  handled by cookie storage
+    } else {
+        [WebViewCookieUtil updateCookieScriptForWKWebviewInIOS10OrEarlier:self.wkWebView];
+    }
     [self loadURLWithCachePolicy:NSURLRequestReloadIgnoringLocalCacheData];
 }
     
 - (IBAction)randomCookieUpdate:(id)sender {
     NSInteger i = arc4random_uniform(100);
-    NSDictionary *cookie = @{@"demo": [@(i) stringValue]};
+    NSDictionary *cookie = @{@"random": [@(i) stringValue]};
     [WebViewCookieUtil clientCookieDidUpdate:cookie toRemove:nil];
 }
 
@@ -179,7 +203,9 @@
         WKWebViewConfiguration * config = [[WKWebViewConfiguration alloc]init];
         config.allowsInlineMediaPlayback = YES;
         config.selectionGranularity = YES;
-        config.processPool = [WebViewCookieUtil sharedProcessPool];
+        if (@available(iOS 11.0, *)) {        
+            config.processPool = [WebViewCookieUtil sharedProcessPool];
+        }
         config.userContentController = self.userContentController;
         
         _wkWebView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:config];
@@ -199,6 +225,8 @@
     if (!_userContentController) {
         WKUserContentController *userContentController = [WKUserContentController new];
         if (@available(iOS 11.0, *)) {
+            //  handled by cookie storage
+        } else{
             [userContentController addUserScript:[WebViewCookieUtil cookieScriptForIOS10AndEarlier]];
         }
         _userContentController = userContentController;

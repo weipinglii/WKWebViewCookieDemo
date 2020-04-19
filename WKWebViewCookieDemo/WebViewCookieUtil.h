@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (WKProcessPool *)sharedProcessPool;
 
 //  call when cookie updates
-+ (void)clientCookieDidUpdate:(NSDictionary *)cookieDict toRemove:(NSArray *_Nullable)toRemove;
++ (void)clientCookieDidUpdate:(NSDictionary *_Nullable)cookieDict toRemove:(NSArray *_Nullable)toRemove;
 
 + (void)updateCookieScriptForWKWebviewInIOS10OrEarlier:(WKWebView *_Nullable)webView;
 
@@ -31,6 +31,11 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 extern NSString *domainForThisApp;
+extern NSString *domainComponentForThisApp;
+
+//  for iOS10 and earlier
+extern NSString * const kCookieScriptShouldUpdateNotification;
+extern NSString * const keyForReloadWebView;
 
 NS_ASSUME_NONNULL_END
 
